@@ -1,9 +1,26 @@
+//! # Array 
+//! Array is a collection utilities
+/// swap_min_max swap min and max elements
+/// display display elements
+
 pub trait Array {
     fn swap_min_max(&mut self);
     fn display(&self);
 }
 
 impl Array for [i32] {
+
+    /// Swap max and min elements of [i32]
+    ///
+    /// # Examples
+    ///
+    /// 
+    /// let mut array: [i32; 5] = [4, 9, 1, 7, 2];
+    ///
+    /// array.swap_min_max();
+    ///
+    /// assert_eq!( [4, 1, 9, 7, 2], array);
+    /// 
     fn swap_min_max<>(&mut self) {
         let mut min_index = 0; // 1
         let mut max_index = 0; // 1
@@ -19,6 +36,7 @@ impl Array for [i32] {
         self[min_index] = self[max_index]; // 3
         self[max_index] = tmp; // 2
     }
+    /// Display elements of [i32]
 
     fn display(&self) {
         for i in 0..self.len() { 
