@@ -57,22 +57,25 @@ impl Vector<i32> for Vec<i32> {
 
     fn random_partition(&mut self, l: usize, r: usize) -> usize {
         let mut rng = thread_rng();
-        let rand = rng.gen_range(l, r);
-        let pivot = self[rand];
-
-        self.swap(r, rand);
-        let i: isize = l as isize; 
-        let mut i: isize = i - 1;
-
-        for j in l..r {
-            if self[j] < pivot { 
+        
+        let pivot = self[rng.gen_range(l, r)];
+        let mut i = l;
+        let mut j = r;
+        
+        loop {
+            while self[i] < pivot {
                 i = i + 1;
-                self.swap(i as usize, j);
             }
+
+            while self[j] > pivot {
+                j = j - 1;
+            }
+            
+            if i >= j { break; }
+            
+            self.swap(i, j);
         }
-    
-        self.swap((i + 1) as usize, r);
-        (i + 1) as usize
+        j
     }
 
     fn right_quick_sort(&mut self, l: usize, r: usize) {
