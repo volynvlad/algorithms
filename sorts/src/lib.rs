@@ -1,4 +1,3 @@
-use std::time;
 use rand::{Rng, thread_rng};
 
 pub trait Vector<I32> {
@@ -42,47 +41,46 @@ impl Vector<i32> for Vec<i32> {
 
     fn right_partition(&mut self, l: usize, r: usize) -> usize {
         let pivot = self[r];
-        let mut i = l; 
+        let i: isize = l as isize; 
+        let mut i: isize = i - 1;
 
         for j in l..r {
-            if self[j] < pivot {
-                self.swap(i, j);
+            if self[j] < pivot { 
                 i = i + 1;
+                self.swap(i as usize, j);
             }
         }
 
-        self.swap(i, r);
-        i
+        self.swap((i + 1) as usize, r);
+        (i + 1) as usize
     }
 
     fn random_partition(&mut self, l: usize, r: usize) -> usize {
         let mut rng = thread_rng();
         let rand = rng.gen_range(l, r);
         let pivot = self[rand];
-        let mut i = l; 
-        let mut k = r;
+
+        self.swap(r, rand);
+        let i: isize = l as isize; 
+        let mut i: isize = i - 1;
 
         for j in l..r {
-            if self[j] < pivot {
-                self.swap(i, j);
+            if self[j] < pivot { 
                 i = i + 1;
-            } else {
-                //self.swap(k, j);
-                //k = k - 1;
+                self.swap(i as usize, j);
             }
         }
-
-        self.swap(i, r);
-        i
+    
+        self.swap((i + 1) as usize, r);
+        (i + 1) as usize
     }
 
     fn right_quick_sort(&mut self, l: usize, r: usize) {
-        if l < r {
+        if l < r { 
             let sep = self.right_partition(l, r);
-            if sep == 0 {
-                return;
+            if sep != 0 {
+                self.right_quick_sort(l, sep - 1);
             }
-            self.right_quick_sort(l, sep - 1);
             self.right_quick_sort(sep + 1, r);
         }
     }
@@ -90,16 +88,38 @@ impl Vector<i32> for Vec<i32> {
     fn random_quick_sort(&mut self, l: usize, r: usize) { 
         if l < r {
             let sep = self.random_partition(l, r);
-            if sep == 0 {
-                return;
+            if sep != 0 { 
+                self.random_quick_sort(l, sep - 1);
             }
-            self.random_quick_sort(l, sep - 1);
             self.random_quick_sort(sep + 1, r);
         }
     }
 
     fn insert_sort(&mut self) {
 
+    }
+}
+
+#[cfg(test)]
+mod tests { 
+    use super::*;
+
+    #[test]
+    fn test_right_qs() {
+        let mut vec: Vec<i32> = Vector::new(10usize, 0, 1000);
+        vec.right_quick_sort(0usize, vec.len() as usize - 1);
+        for i in 0..vec.len() - 1 {
+            assert!(vec[i] <= vec[i + 1]);
+        }
+    }
+
+    #[test]
+    fn test_random_qs() {
+        let mut vec: Vec<i32> = Vector::new(10usize, 0, 1000);
+        vec.random_quick_sort(0usize, vec.len() as usize - 1);
+        for i in 0..vec.len() - 1 {
+            assert!(vec[i] <= vec[i + 1]);
+        }
     }
 }
 

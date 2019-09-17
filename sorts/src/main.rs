@@ -6,11 +6,11 @@ fn main() {
     let max = 40;
     let mut array: Vec<i32> = Vector::new(number, min, max);
     let mut array2 = array.clone();
-    println!("right quick sort"); 
-    array.display();
-    array.right_quick_sort(0usize, array.len() as usize - 1 );
-    array.display();
-    println!("random quick sort");
+    //println!("right quick sort"); 
+    //array.display();
+    //array.right_quick_sort(0usize, array.len() as usize - 1);
+    //array.display();
+    //println!("random quick sort");
     array2.display();
     array2.random_quick_sort(0usize, array2.len() as usize - 1 );
     array2.display();
