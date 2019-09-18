@@ -11,7 +11,7 @@ pub trait Vector<I32> {
 
     fn right_quick_sort(&mut self, l: usize, r: usize);
     fn random_quick_sort(&mut self, l: usize, r:usize);
-    fn insert_sort(&mut self);
+    fn insertion_sort(&mut self);
 }
 
 impl Vector<i32> for Vec<i32> {
@@ -74,6 +74,10 @@ impl Vector<i32> for Vec<i32> {
             if i >= j { break; }
             
             self.swap(i, j);
+            
+            if self[i] == self[j] {
+                i = i + 1;    
+            }
         }
         j
     }
@@ -98,8 +102,16 @@ impl Vector<i32> for Vec<i32> {
         }
     }
 
-    fn insert_sort(&mut self) {
-
+    fn insertion_sort(&mut self) {
+        for i in 0..self.len() {
+            for j in (0..i).rev() {
+                if self[j] >= self[j + 1] {
+                    self.swap(j, j + 1);
+                } else {
+                    break;
+                }
+            }
+        }
     }
 }
 
@@ -109,7 +121,7 @@ mod tests {
 
     #[test]
     fn test_right_qs() {
-        let mut vec: Vec<i32> = Vector::new(10usize, 0, 1000);
+        let mut vec: Vec<i32> = Vector::new(1_000_000usize, 0, 1000);
         vec.right_quick_sort(0usize, vec.len() as usize - 1);
         for i in 0..vec.len() - 1 {
             assert!(vec[i] <= vec[i + 1]);
@@ -118,8 +130,17 @@ mod tests {
 
     #[test]
     fn test_random_qs() {
-        let mut vec: Vec<i32> = Vector::new(10usize, 0, 1000);
+        let mut vec: Vec<i32> = Vector::new(1_000_000usize, 0, 1000);
         vec.random_quick_sort(0usize, vec.len() as usize - 1);
+        for i in 0..vec.len() - 1 {
+            assert!(vec[i] <= vec[i + 1]);
+        }
+    }
+
+    #[test]
+    fn test_insertion_sort() {        
+        let mut vec: Vec<i32> = Vector::new(1_000usize, 0, 1000);
+        vec.insertion_sort();
         for i in 0..vec.len() - 1 {
             assert!(vec[i] <= vec[i + 1]);
         }
