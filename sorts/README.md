@@ -1,6 +1,8 @@
 # Sorts
 ## Run 
+```bash
 cargo run
+```
 ## 10^5 elements with range 10^5
 ### Quicksort with right separating element
 * 235.940249ms 
