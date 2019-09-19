@@ -10,8 +10,9 @@ pub trait Vector<I32> {
     fn random_partition(&mut self, l: usize, r: usize) -> usize;
 
     fn right_quick_sort(&mut self, l: usize, r: usize);
-    fn random_quick_sort(&mut self, l: usize, r:usize);
+    fn random_quick_sort(&mut self, l: usize, r: usize);
     fn insertion_sort(&mut self);
+    fn hybrid_sort(&mut self, l: usize, r: usize, k: u32);
 }
 
 impl Vector<i32> for Vec<i32> {
@@ -110,6 +111,18 @@ impl Vector<i32> for Vec<i32> {
                 } else {
                     break;
                 }
+            }
+        }
+    }
+
+    fn hybrid_sort(&mut self, l: usize, r: usize, k: u32) {
+        if l < r {
+            if (r - l + 1) > k as usize {    
+                let sep = self.right_partition(l, r);
+                if sep != 0 { 
+                    self.hybrid_sort(l, sep - 1, k);
+                }
+                self.hybrid_sort(sep + 1, r, k);
             }
         }
     }
