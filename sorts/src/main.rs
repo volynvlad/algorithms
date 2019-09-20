@@ -17,7 +17,7 @@ fn get_time(vec: Vec<i32>) {
     let t4 = Instant::now();
     println!("Random qs {:?}", t4.duration_since(t3));
 
-    for k in 6u32..13u32 { 
+    for k in 6..13 { 
         let mut vec_hybrid_s = vec.clone();
         let t5 = Instant::now(); 
         vec_hybrid_s.hybrid_sort(0usize, vec_hybrid_s.len() - 1, k);
@@ -27,7 +27,7 @@ fn get_time(vec: Vec<i32>) {
 }
 
 fn main() {
-   
+    
     let vec_5_5: Vec<i32> = Vector::new(1_000_00, 0, 1_000_00);
     let vec_5_6: Vec<i32> = Vector::new(1_000_00, 0, 1_000_000);
     let vec_5_7: Vec<i32> = Vector::new(1_000_00, 0, 1_000_0000);
@@ -35,7 +35,7 @@ fn main() {
     let vec_6_6: Vec<i32> = Vector::new(1_000_000, 0, 1_000_000);
     let vec_6_7: Vec<i32> = Vector::new(1_000_000, 0, 1_000_0000);
     let vec_7_5: Vec<i32> = Vector::new(1_000_0000, 0, 1_000_00);
-    let vec_7_6: Vec<i32> = Vector::new(1_000_0000, 0, 1_000_000);
+    let vec_7_6: Vec<i32> = Vector::new(1_000_0000, 0, 1_000_000); 
     let vec_7_7: Vec<i32> = Vector::new(1_000_0000, 0, 1_000_0000);
     
     println!("10^5 elements with range 10^5");
@@ -49,7 +49,7 @@ fn main() {
     println!("10^6 elements with range 10^6");
     get_time(vec_6_6);
     println!("10^6 elements with range 10^7");
-    get_time(vec_6_7);
+    get_time(vec_6_7); 
     println!("10^7 elements with range 10^5");
     get_time(vec_7_5);
     println!("10^7 elements with range 10^6");

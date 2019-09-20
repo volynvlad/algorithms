@@ -5,118 +5,118 @@ cargo run
 ```
 ## 10^5 elements with range 10^5
 ### Quicksort with right separating element
-* 235.940249ms 
+* 248.786952ms
 ### Quicksort with random separating element 
-* 296.856015ms 
+* **235.940249ms** 
 ### Hybrid sort
-* 219.835569ms with k = 6
-* 217.183436ms with k = 7
-* 215.259147ms with k = 8
-* 212.924971ms with k = 9
-* 210.998396ms with k = 10
-* 209.804209ms with k = 11
-* **207.660588ms** with k = 12 
+* 244.684264ms with k = 6
+* 244.875362ms with k = 7
+* 245.35203ms with k = 8
+* 246.145936ms with k = 9
+* 247.55522ms with k = 10
+* 247.833774ms with k = 11
+* 248.867712ms with k = 12
 ## 10^5 elements with range 10^6
 ### Quicksort with right separating elements
-* 255.660605ms 
+* 241.429976ms 
 ### Quicksort with random separating element 
-* 281.125754ms
+* 280.538596ms
 ### Hybrid sort 
-* 238.156003ms with k = 6
-* 236.126947ms with k = 7
-* 233.574701ms with k = 8
-* 231.942972ms with k = 9
-* 230.188783ms with k = 10
-* 230.963909ms with k = 11
-* **228.585484ms** with k = 12
+* **235.799256ms** with k = 6
+* 235.820998ms with k = 7
+* 236.039688ms with k = 8
+* 236.568928ms with k = 9
+* 237.097351ms with k = 10
+* 237.797173ms with k = 11
+* 238.729776ms with k = 12
 ## 10^5 elements with range 10^7
 ### Quicksort with right separating element 
-* 250.13494ms
+* 247.955765ms
 ### Quicksort with random separating element 
-* 282.381566ms
+* 280.821875ms
 ### Hybrid sort
-* 254.292908ms with k = 6
-* 233.68986ms  with k = 7
-* 224.888703ms with k = 8
-* 223.444679ms with k = 9
-* 220.876807ms with k = 10
-* 219.174124ms with k = 11
-* **218.277494ms** with k = 12
+* **242.038365ms** with k = 6
+* 242.115523ms with k = 7
+* 242.366387ms with k = 8
+* 242.73346ms with k = 9
+* 243.46888ms with k = 10
+* 244.132964ms with k = 11
+* 244.944329ms with k = 12
 ## 10^6 elements with range 10^5
 ### Quicksort with right separating element 
-* 3.116155541s
+* **3.159422689s**
 ### Quicksort with random separating element 
-* 4.39276819s
+* 4.383319906s
 ### Hybrid sort
-* 2.939829932s with k = 6
-* 2.897159519s with k = 7
-* 2.857636287s with k = 8
-* 2.824533862s with k = 9
-* 2.791501276s with k = 10
-* 2.767505534s with k = 11
-* **2.747459467s** with k = 12
+* 3.168416358s with k = 6
+* 3.185900643s with k = 7
+* 3.203692035s with k = 8
+* 3.223862372s with k = 9
+* 3.240090541s with k = 10
+* 3.255208059s with k = 11
+* 3.273013717s with k = 12
 ## 10^6 elements with range 10^6
 ### Quicksort with right separating element 
-* 2.96930794s
+* 3.008787409s
 ### Quicksort with random separating element 
-* 3.284597949s
+* 3.289206661s
 ### Hybrid sort
-* 2.806365318s with k = 6
-* 2.7820947s   with k = 7
-* 2.765211841s with k = 8
-* 2.748236872s with k = 9
-* 2.726851308s with k = 10
-* 2.710785999s with k = 11
-* **2.698113642s** with k = 12
+* **2.964612728s** with k = 6
+* 2.967995029s with k = 7
+* 2.97758496s with k = 8
+* 2.977368758s with k = 9
+* 2.983695665s with k = 10
+* 2.995224559s with k = 11
+* 3.003433199s with k = 12
 ## 10^6 elements with range 10^7
 ### Quicksort with right separating element 
-* 3.221850274s
+* 3.025715569s
 ### Quicksort with random separating element 
-* 3.165233891s
+* 3.146323823s
 ### Hybrid sort
-* 3.054134318s with k = 6
-* 3.025711426s with k = 7
-* 3.003236841s with k = 8
-* 3.027786638s with k = 9
-* 3.062326836s with k = 10
-* 2.975273685s with k = 11
-* **2.92825499s**  with k = 12
+* **2.969476814s** with k = 6
+* 2.976003374s with k = 7
+* 2.979034252s with k = 8
+* 2.98880683s with k = 9
+* 2.991418083s with k = 10
+* 2.995895712s with k = 11
+* 3.003276783s with k = 12
 ## 10^7 elements with range 10^5
 ### Quicksort with right separating element 
-* 65.292583795s
+* **65.108810599s**
 ### Quicksort with random separating element 
-* 120.679172304s
+* 119.610571266s
 ### Hybrid sort
-* 65.271824912s with k = 6
-* 64.946511955s with k = 7
-* 64.826327417s with k = 8
-* 64.917198835s with k = 9
-* 64.725944191s with k = 10
-* 64.620577411s with k = 11
-* **64.516643645s** with k = 12
+* 65.138599001s with k = 6
+* 65.162976445s with k = 7
+* 65.175412235s with k = 8
+* 65.233892612s with k = 9
+* 65.278896681s with k = 10
+* 65.358262796s with k = 11
+* 65.40770257s with k = 12
 ## 10^7 elements with range 10^6
 ### Quicksort with right separating element 
-* 38.104254252s
+* **37.054615583s**
 ### Quicksort with random separating element 
-* 47.687797284s
+* 47.714717989s
 ### Hybrid sort
-* 36.365094805s with k = 6
-* 35.98970335s  with k = 7
-* 35.548737265s with k = 8
-* 35.201246011s with k = 9
-* 34.901778812s with k = 10
-* 34.663814365s with k = 11
-* **34.468181015s** with k = 12
+* 37.239570269s with k = 6
+* 37.341427935s with k = 7
+* 37.563610642s with k = 8
+* 37.753482928s with k = 9
+* 37.951534596s with k = 10
+* 38.060840684s with k = 11
+* 38.2438965s with k = 12
 ## 10^7 elements with range 10^7
 ### Quicksort with right separating element 
-* 36.03370381s
+* 37.336636579s
 ### Quicksort with random separating element 
-* 36.739115134s
+* **36.366054371s**
 ### Hybrid sort 
-* 34.401224599s with k = 6
-* 34.196986195s with k = 7
-* 34.136092396s with k = 8
-* 33.778640891s with k = 9
-* 33.566073742s with k = 10
-* 33.387900136s with k = 11
-* **33.362616113s** with k = 12
+* 36.95357092s with k = 6
+* 37.000033629s with k = 7
+* 37.065827963s with k = 8
+* 37.149987755s with k = 9
+* 37.167387009s with k = 10
+* 37.311382251s with k = 11
+* 37.392091079s with k = 12

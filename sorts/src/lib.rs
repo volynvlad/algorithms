@@ -11,8 +11,8 @@ pub trait Vector<I32> {
 
     fn right_quick_sort(&mut self, l: usize, r: usize);
     fn random_quick_sort(&mut self, l: usize, r: usize);
-    fn insertion_sort(&mut self);
-    fn hybrid_sort(&mut self, l: usize, r: usize, k: u32);
+    fn insertion_sort(&mut self, l: usize, r: usize);
+    fn hybrid_sort(&mut self, l: usize, r: usize, k: usize);
 }
 
 impl Vector<i32> for Vec<i32> {
@@ -103,9 +103,9 @@ impl Vector<i32> for Vec<i32> {
         }
     }
 
-    fn insertion_sort(&mut self) {
-        for i in 0..self.len() {
-            for j in (0..i).rev() {
+    fn insertion_sort(&mut self, l: usize, r: usize) {
+        for i in l..r {
+            for j in (l..i).rev() {
                 if self[j] >= self[j + 1] {
                     self.swap(j, j + 1);
                 } else {
@@ -115,14 +115,16 @@ impl Vector<i32> for Vec<i32> {
         }
     }
 
-    fn hybrid_sort(&mut self, l: usize, r: usize, k: u32) {
+    fn hybrid_sort(&mut self, l: usize, r: usize, k: usize) {
         if l < r {
-            if (r - l + 1) > k as usize {    
+            if (r - l + 1) > k {    
                 let sep = self.right_partition(l, r);
                 if sep != 0 { 
                     self.hybrid_sort(l, sep - 1, k);
                 }
                 self.hybrid_sort(sep + 1, r, k);
+            } else {
+                self.insertion_sort(l, r);
             }
         }
     }
@@ -131,10 +133,23 @@ impl Vector<i32> for Vec<i32> {
 #[cfg(test)]
 mod tests { 
     use super::*;
+    
+    #[test] 
+    fn test_len() {
+        let mut vec: Vec<i32> = Vector::new(9, 1, 4);
+        assert!(vec.len() == 9);
+    }
+
+    #[test]
+    fn test_swap() {
+        let mut vec: Vec<i32> = vec![1, 3, 0, 8, 2];
+        vec.swap(0, 3);
+        assert!(vec == vec![8, 3, 0, 1, 2]);
+    }
 
     #[test]
     fn test_right_qs() {
-        let mut vec: Vec<i32> = Vector::new(1_000_000usize, 0, 1000);
+        let mut vec: Vec<i32> = Vector::new(1_000usize, 0, 1000);
         vec.right_quick_sort(0usize, vec.len() as usize - 1);
         for i in 0..vec.len() - 1 {
             assert!(vec[i] <= vec[i + 1]);
@@ -143,7 +158,7 @@ mod tests {
 
     #[test]
     fn test_random_qs() {
-        let mut vec: Vec<i32> = Vector::new(1_000_000usize, 0, 1000);
+        let mut vec: Vec<i32> = Vector::new(1_000usize, 0, 1000);
         vec.random_quick_sort(0usize, vec.len() as usize - 1);
         for i in 0..vec.len() - 1 {
             assert!(vec[i] <= vec[i + 1]);
@@ -153,7 +168,16 @@ mod tests {
     #[test]
     fn test_insertion_sort() {        
         let mut vec: Vec<i32> = Vector::new(1_000usize, 0, 1000);
-        vec.insertion_sort();
+        vec.insertion_sort(0, 1000);
+        for i in 0..vec.len() - 1 {
+            assert!(vec[i] <= vec[i + 1]);
+        }
+    }
+
+    #[test]
+    fn test_hybrid_sort() { 
+        let mut vec: Vec<i32> = Vector::new(1_000usize, 0, 1000);
+        vec.hybrid_sort(0usize, vec.len() as usize - 1, 10);
         for i in 0..vec.len() - 1 {
             assert!(vec[i] <= vec[i + 1]);
         }

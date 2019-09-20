@@ -1,99 +1,99 @@
 10^5 elements with range 10^5
 Copied!
-Right  qs 235.940249ms
-Random qs 296.856015ms
-Hybrid  s 219.835569ms with k = 6
-Hybrid  s 217.183436ms with k = 7
-Hybrid  s 215.259147ms with k = 8
-Hybrid  s 212.924971ms with k = 9
-Hybrid  s 210.998396ms with k = 10
-Hybrid  s 209.804209ms with k = 11
-Hybrid  s 207.660588ms with k = 12
+Right  qs 248.786952ms
+Random qs 292.390996ms
+Hybrid  s 244.684264ms with k = 6
+Hybrid  s 244.875362ms with k = 7
+Hybrid  s 245.35203ms with k = 8
+Hybrid  s 246.145936ms with k = 9
+Hybrid  s 247.55522ms with k = 10
+Hybrid  s 247.833774ms with k = 11
+Hybrid  s 248.867712ms with k = 12
 10^5 elements with range 10^6
 Copied!
-Right  qs 255.660605ms
-Random qs 281.125754ms
-Hybrid  s 238.156003ms with k = 6
-Hybrid  s 236.126947ms with k = 7
-Hybrid  s 233.574701ms with k = 8
-Hybrid  s 231.942972ms with k = 9
-Hybrid  s 230.188783ms with k = 10
-Hybrid  s 230.963909ms with k = 11
-Hybrid  s 228.585484ms with k = 12
+Right  qs 241.429976ms
+Random qs 280.538596ms
+Hybrid  s 235.799256ms with k = 6
+Hybrid  s 235.820998ms with k = 7
+Hybrid  s 236.039688ms with k = 8
+Hybrid  s 236.568928ms with k = 9
+Hybrid  s 237.097351ms with k = 10
+Hybrid  s 237.797173ms with k = 11
+Hybrid  s 238.729776ms with k = 12
 10^5 elements with range 10^7
 Copied!
-Right  qs 250.13494ms
-Random qs 282.381566ms
-Hybrid  s 254.292908ms with k = 6
-Hybrid  s 233.68986ms with k = 7
-Hybrid  s 224.888703ms with k = 8
-Hybrid  s 223.444679ms with k = 9
-Hybrid  s 220.876807ms with k = 10
-Hybrid  s 219.174124ms with k = 11
-Hybrid  s 218.277494ms with k = 12
+Right  qs 247.955765ms
+Random qs 280.821875ms
+Hybrid  s 242.038365ms with k = 6
+Hybrid  s 242.115523ms with k = 7
+Hybrid  s 242.366387ms with k = 8
+Hybrid  s 242.73346ms with k = 9
+Hybrid  s 243.46888ms with k = 10
+Hybrid  s 244.132964ms with k = 11
+Hybrid  s 244.944329ms with k = 12
 10^6 elements with range 10^5
 Copied!
-Right  qs 3.116155541s
-Random qs 4.39276819s
-Hybrid  s 2.939829932s with k = 6
-Hybrid  s 2.897159519s with k = 7
-Hybrid  s 2.857636287s with k = 8
-Hybrid  s 2.824533862s with k = 9
-Hybrid  s 2.791501276s with k = 10
-Hybrid  s 2.767505534s with k = 11
-Hybrid  s 2.747459467s with k = 12
+Right  qs 3.159422689s
+Random qs 4.383319906s
+Hybrid  s 3.168416358s with k = 6
+Hybrid  s 3.185900643s with k = 7
+Hybrid  s 3.203692035s with k = 8
+Hybrid  s 3.223862372s with k = 9
+Hybrid  s 3.240090541s with k = 10
+Hybrid  s 3.255208059s with k = 11
+Hybrid  s 3.273013717s with k = 12
 10^6 elements with range 10^6
 Copied!
-Right  qs 2.96930794s
-Random qs 3.284597949s
-Hybrid  s 2.806365318s with k = 6
-Hybrid  s 2.7820947s with k = 7
-Hybrid  s 2.765211841s with k = 8
-Hybrid  s 2.748236872s with k = 9
-Hybrid  s 2.726851308s with k = 10
-Hybrid  s 2.710785999s with k = 11
-Hybrid  s 2.698113642s with k = 12
+Right  qs 3.008787409s
+Random qs 3.289206661s
+Hybrid  s 2.964612728s with k = 6
+Hybrid  s 2.967995029s with k = 7
+Hybrid  s 2.97758496s with k = 8
+Hybrid  s 2.977368758s with k = 9
+Hybrid  s 2.983695665s with k = 10
+Hybrid  s 2.995224559s with k = 11
+Hybrid  s 3.003433199s with k = 12
 10^6 elements with range 10^7
 Copied!
-Right  qs 3.221850274s
-Random qs 3.165233891s
-Hybrid  s 3.054134318s with k = 6
-Hybrid  s 3.025711426s with k = 7
-Hybrid  s 3.003236841s with k = 8
-Hybrid  s 3.027786638s with k = 9
-Hybrid  s 3.062326836s with k = 10
-Hybrid  s 2.975273685s with k = 11
-Hybrid  s 2.92825499s with k = 12
+Right  qs 3.025715569s
+Random qs 3.146323823s
+Hybrid  s 2.969476814s with k = 6
+Hybrid  s 2.976003374s with k = 7
+Hybrid  s 2.979034252s with k = 8
+Hybrid  s 2.98880683s with k = 9
+Hybrid  s 2.991418083s with k = 10
+Hybrid  s 2.995895712s with k = 11
+Hybrid  s 3.003276783s with k = 12
 10^7 elements with range 10^5
 Copied!
-Right  qs 65.292583795s
-Random qs 120.679172304s
-Hybrid  s 65.271824912s with k = 6
-Hybrid  s 64.946511955s with k = 7
-Hybrid  s 64.826327417s with k = 8
-Hybrid  s 64.917198835s with k = 9
-Hybrid  s 64.725944191s with k = 10
-Hybrid  s 64.620577411s with k = 11
-Hybrid  s 64.516643645s with k = 12
+Right  qs 65.108810599s
+Random qs 119.610571266s
+Hybrid  s 65.138599001s with k = 6
+Hybrid  s 65.162976445s with k = 7
+Hybrid  s 65.175412235s with k = 8
+Hybrid  s 65.233892612s with k = 9
+Hybrid  s 65.278896681s with k = 10
+Hybrid  s 65.358262796s with k = 11
+Hybrid  s 65.40770257s with k = 12
 10^7 elements with range 10^6
 Copied!
-Right  qs 38.104254252s
-Random qs 47.687797284s
-Hybrid  s 36.365094805s with k = 6
-Hybrid  s 35.98970335s with k = 7
-Hybrid  s 35.548737265s with k = 8
-Hybrid  s 35.201246011s with k = 9
-Hybrid  s 34.901778812s with k = 10
-Hybrid  s 34.663814365s with k = 11
-Hybrid  s 34.468181015s with k = 12
+Right  qs 37.054615583s
+Random qs 47.714717989s
+Hybrid  s 37.239570269s with k = 6
+Hybrid  s 37.341427935s with k = 7
+Hybrid  s 37.563610642s with k = 8
+Hybrid  s 37.753482928s with k = 9
+Hybrid  s 37.951534596s with k = 10
+Hybrid  s 38.060840684s with k = 11
+Hybrid  s 38.2438965s with k = 12
 10^7 elements with range 10^7
 Copied!
-Right  qs 36.03370381s
-Random qs 36.739115134s
-Hybrid  s 34.401224599s with k = 6
-Hybrid  s 34.196986195s with k = 7
-Hybrid  s 34.136092396s with k = 8
-Hybrid  s 33.778640891s with k = 9
-Hybrid  s 33.566073742s with k = 10
-Hybrid  s 33.387900136s with k = 11
-Hybrid  s 33.362616113s with k = 12
+Right  qs 37.336636579s
+Random qs 36.366054371s
+Hybrid  s 36.95357092s with k = 6
+Hybrid  s 37.000033629s with k = 7
+Hybrid  s 37.065827963s with k = 8
+Hybrid  s 37.149987755s with k = 9
+Hybrid  s 37.167387009s with k = 10
+Hybrid  s 37.311382251s with k = 11
+Hybrid  s 37.392091079s with k = 12
