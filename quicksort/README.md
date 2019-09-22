@@ -5,6 +5,7 @@ cargo run
 ```
 time table with **opt level = 0**
 elements | min - max | qs with right sep element | qs with random sep element | best hybrid  
+-------------------------------------------------------------------------------------------
 100.000 | 0 - 100.000 | 238.581348ms | 297.693887ms | **231.761077ms** with k = 12
 100.000 | 0 - 1.000.000 | 239.619425ms | 286.833151ms | **233.463987ms** with k = 12
 100.000 | 0 - 10.000.000 | 240.548215ms | 290.039603ms | **234.410207ms** with k = 9
@@ -14,8 +15,11 @@ elements | min - max | qs with right sep element | qs with random sep element | 
 10.000.000 | 0 - 100.000 | 59.685103975s | 122.501444574s | **59.194349907s** with k = 12
 10.000.000 | 0 - 1.000.000 | 34.578442389s | 48.939872619s | **32.266697093s** with k = 12
 10.000.000 | 0 - 10.000.000 | 33.86985983s | 37.004842134s | **33.117591983s** with k = 12
+
 **opt level = 3**
-elements | min - max | qs with right sep element | qs with random sep element | best hybrid  
+
+elements | min - max | qs with right sep element | qs with random sep element | best hybrid
+-------------------------------------------------------------------------------------------  
 100.000 | 0 - 100.000 | 8.551484ms | 12.977617ms | **8.075251ms** with k = 12
 100.000 | 0 - 1.000.000 | 8.712473ms | 12.34744ms | **8.218628ms** with k = 12
 100.000 | 0 - 10.000.000 | 8.639601ms | 12.428369ms | **8.122413ms** with k = 12
