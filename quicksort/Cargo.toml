@@ -1,5 +1,5 @@
 [package]
-name = "sorts"
+name = "quicksort"
 version = "0.1.0"
 authors = ["vlad <volynvlad@gmail.com>"]
 edition = "2018"
@@ -8,6 +8,7 @@ edition = "2018"
 
 [dependencies]
 rand = "0.7.1"
+quickersort = "3.0.0"
 
 [profile.dev]
-opt-level = 3
+opt-level = 0

@@ -44,14 +44,16 @@ impl Vector<i32> for Vec<i32> {
         let pivot = self[r as usize];
         let mut i = l - 1;
 
-        for j in l..r {
+        let mut j = l;
+        while j < r {
             if self[j as usize] < pivot { 
                 i = i + 1;
                 self.swap(i, j);
             }
+            j = j + 1;
         }
 
-        self.swap((i + 1), r);
+        self.swap(i + 1, r);
         (i + 1) 
     }
 
@@ -99,28 +101,45 @@ impl Vector<i32> for Vec<i32> {
     }
 
     fn insertion_sort(&mut self, l: isize, r: isize) {
-        let mut value;
-        let mut i = l;
+        // 1
+        let mut value; 
+        //  1      1
+        let mut i = l; 
+        //   1 
+        // => 4
         let mut j;
-        while i <= r { // 1 + 2n
-            /*
-            for j in (l..i).rev() { // 1 + 2m
-                if self[j as usize] >= self[(j + 1) as usize] { // 3m*n
-                    self.swap(j, j + 1); // 4m*n
+        //       1 => n
+        while i <= r {
+            /*  1       3   2 => 5n^2 + 1
+             for (j = l; j < i; i++)
+            for j in (l..i).rev() {
+                           1       1          2  => 4n^2     
+                if self[j as usize] >= self[(j + 1) as usize] {
+                            // 8      => 8n^2
+                    self.swap(j, j + 1);
                 } else {
-                    break;
+                      1   => n^2
+                    break; 
                 }
-            }
-            */ 
+            } // 17n^2 + 2n + 4
+            */  
+            //    1         1    => 2n
             value = self[i as usize];
+            // 1                 => n
             j = i;
-            while j > 0 && j >= l && self[j as usize - 1] > value {
+            //    1 1   1    1       2         1   => 7n^2
+            while j > 0 && j >= l && self[j as usize - 1] > value { 
+                //       1      1            2  => 4n^2
                 self[j as usize] = self[j as usize - 1];
-                j -= 1;
+                //1   1   => 2n^2
+                j = j - 1;
             }
+            //      1        1      => 2n
             self[j as usize] = value;
-            i += 1;
+            // 1   1        => 2n
+            i = i + 1; 
         }
+        //4 + n + 2n + n + 7n^2 + 4n^2 + 2n^2 + 2n + 2n = 13n^2 + 8n + 4 => O(n^2)
     }
 
     fn hybrid_sort(&mut self, l: isize, r: isize, k: isize) {
