@@ -11,4 +11,4 @@ rand = "0.7.1"
 quickersort = "3.0.0"
 
 [profile.dev]
-opt-level = 0
+opt-level = 3
