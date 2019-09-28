@@ -10,13 +10,15 @@ fn get_time(vec: Vec<i32>) {
     vec_right_qs.mergesort(0, vec_right_qs.len() as isize - 1);
     let t2 = Instant::now();
     println!("merge sort {:?}", t2.duration_since(t1));
- 
-    for k in 4..13 {
+
+    let mut k = 4;
+    while k <= 64{
         let mut vec_hybrid_s = vec.clone();
         let t5 = Instant::now(); 
         vec_hybrid_s.hybrid_sort(0, vec_hybrid_s.len() as isize - 1, k);
         let t6 = Instant::now();
         println!("Hybrid  s {:?} with k = {}", t6.duration_since(t5), k);
+        k *= 2;
     }
 }
 
@@ -28,7 +30,7 @@ fn main() {
     while i <= 7 {
         j = 5u32;
         while j <= 7 {
-            let mut vec: Vec<i32> = Vector::new(base.pow(i) as usize, 0, base.pow(j));
+            let vec: Vec<i32> = Vector::new(base.pow(i) as usize, 0, base.pow(j));
             println!("10^{} elements with range 10^{}", i, j);
             get_time(vec);
             j = j + 1;
