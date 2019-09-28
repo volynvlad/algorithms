@@ -1,0 +1,52 @@
+10^5 elements with range 10^5
+merge sort 1.004001134s
+Hybrid  s 289.037466ms with k = 4
+Hybrid  s 162.847127ms with k = 5
+Hybrid  s 149.134732ms with k = 6
+Hybrid  s 148.519146ms with k = 7
+Hybrid  s 154.070814ms with k = 8
+Hybrid  s 148.898094ms with k = 9
+Hybrid  s 148.575567ms with k = 10
+Hybrid  s 93.219676ms with k = 11
+Hybrid  s 79.717297ms with k = 12
+10^5 elements with range 10^6
+merge sort 993.130449ms
+Hybrid  s 285.893975ms with k = 4
+Hybrid  s 161.80162ms with k = 5
+Hybrid  s 147.645112ms with k = 6
+Hybrid  s 147.869945ms with k = 7
+Hybrid  s 148.652163ms with k = 8
+Hybrid  s 148.258629ms with k = 9
+Hybrid  s 148.096269ms with k = 10
+Hybrid  s 94.377505ms with k = 11
+Hybrid  s 80.05467ms with k = 12
+10^5 elements with range 10^7
+merge sort 1.021638603s
+Hybrid  s 299.802022ms with k = 4
+Hybrid  s 171.507413ms with k = 5
+Hybrid  s 156.90382ms with k = 6
+Hybrid  s 155.049907ms with k = 7
+Hybrid  s 155.315679ms with k = 8
+Hybrid  s 155.032773ms with k = 9
+Hybrid  s 156.898107ms with k = 10
+Hybrid  s 98.834875ms with k = 11
+Hybrid  s 81.112542ms with k = 12
+10^6 elements with range 10^5
+merge sort 156.861399802s
+Hybrid  s 37.662103577s with k = 4
+Hybrid  s 37.95841734s with k = 5
+Hybrid  s 31.700970422s with k = 6
+Hybrid  s 19.41824793s with k = 7
+Hybrid  s 20.227869785s with k = 8
+Hybrid  s 19.729669778s with k = 9
+Hybrid  s 19.259349986s with k = 10
+Hybrid  s 19.440183492s with k = 11
+Hybrid  s 25.209238907s with k = 12
+10^6 elements with range 10^6
+merge sort 243.099601502s
+Hybrid  s 51.147392065s with k = 4
+Hybrid  s 42.618374169s with k = 5
+Hybrid  s 34.030083473s with k = 6
+Hybrid  s 22.266396439s with k = 7
+Hybrid  s 20.322921043s with k = 8
+Hybrid  s 29.339390983s with k = 9

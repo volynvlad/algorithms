@@ -1,0 +1,27 @@
+10^5 elements with range 10^5
+merge sort 16.509467ms
+Best hybrid_sort = 10.344906ms with k = 57
+10^5 elements with range 10^6
+merge sort 16.22553ms
+Best hybrid_sort = 10.352935ms with k = 48
+10^5 elements with range 10^7
+merge sort 16.236098ms
+Best hybrid_sort = 10.354894ms with k = 48
+10^6 elements with range 10^5
+merge sort 184.379844ms
+Best hybrid_sort = 124.701074ms with k = 56
+10^6 elements with range 10^6
+merge sort 185.34316ms
+Best hybrid_sort = 127.86905ms with k = 42
+10^6 elements with range 10^7
+merge sort 187.49214ms
+Best hybrid_sort = 127.802745ms with k = 61
+10^7 elements with range 10^5
+merge sort 1.96655269s
+Best hybrid_sort = 1.355565221s with k = 41
+10^7 elements with range 10^6
+merge sort 2.116911207s
+Best hybrid_sort = 1.481712132s with k = 40
+10^7 elements with range 10^7
+merge sort 2.096075424s
+Best hybrid_sort = 1.513563943s with k = 50

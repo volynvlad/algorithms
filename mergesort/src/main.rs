@@ -12,14 +12,21 @@ fn get_time(vec: Vec<i32>) {
     println!("merge sort {:?}", t2.duration_since(t1));
 
     let mut k = 4;
+    let mut min_k = k;
+    let mut min_time = t2.duration_since(t1);
     while k <= 64{
         let mut vec_hybrid_s = vec.clone();
         let t5 = Instant::now(); 
         vec_hybrid_s.hybrid_sort(0, vec_hybrid_s.len() as isize - 1, k);
         let t6 = Instant::now();
-        println!("Hybrid  s {:?} with k = {}", t6.duration_since(t5), k);
-        k *= 2;
+        //println!("Hybrid  s {:?} with k = {}", t6.duration_since(t5), k);
+        if min_time > t6.duration_since(t5) {
+            min_k = k;
+            min_time = t6.duration_since(t5);
+        }
+        k += 1;
     }
+    println!("Best hybrid_sort = {:?} with k = {}", min_time, min_k);
 }
 
 fn main() {

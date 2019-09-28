@@ -82,24 +82,27 @@ impl Vector<i32> for Vec<i32> {
         }
     }
     */ 
-    fn merge(&mut self, l: isize, sep:isize, r:isize) {    
-        let mut left = self[l as usize..sep as usize + 1].to_vec();   
-        let mut right = self[sep as usize + 1..r as usize + 1].to_vec();   
-        left.reverse();   
-        right.reverse();  
-        for k in l..r + 1 {      
-            if left.is_empty() {           
-                self[k as usize] = right.pop().unwrap(); 
+    fn merge(&mut self, l: isize, sep:isize, r:isize) {
+        let left_vec = self[l as usize..=sep as usize].to_vec();
+        let mut left = left_vec.iter().peekable();   
+        let right_vec = self[sep as usize + 1..=r as usize].to_vec();
+        let mut right = right_vec.iter().peekable();
+
+        for k in l..=r {
+            if left.peek().is_none() {           
+                self[k as usize] = *right.next().unwrap(); 
                 continue;       
-            }       
-            if right.is_empty() {           
-                self[k as usize] = left.pop().unwrap();           
+            }
+
+            if right.peek().is_none() {           
+                self[k as usize] = *left.next().unwrap();           
                 continue;       
-            }       
-            if right.last() < left.last() {           
-                self[k as usize] = right.pop().unwrap();       
+            }
+
+            if right.peek().unwrap() < left.peek().unwrap() {           
+                self[k as usize] = *right.next().unwrap();       
             } else {           
-                self[k as usize] = left.pop().unwrap();       
+                self[k as usize] = *left.next().unwrap();       
             }   
         }
     } 
@@ -201,7 +204,9 @@ pub mod tests {
     #[test]
     fn test_hybrid_sort() { 
         let mut vec: Vec<i32> = Vector::new(1600, 0, 1000);
+        vec.display();
         vec.hybrid_sort(0, vec.len() as isize - 1, 32);
+        vec.display();
         for i in 0..vec.len() - 1 {
             assert!(vec[i] <= vec[i + 1]);
         } 
@@ -210,7 +215,9 @@ pub mod tests {
     #[test]
     fn test_mergesort_10_6() {
         let mut vec: Vec<i32> = Vector::new(1_000_000, 0, 1_00_000);
+        vec.display();
         vec.mergesort(0, vec.len() as isize - 1);
+        vec.display();
         for i in 0..vec.len() - 1 {
             assert!(vec[i] <= vec[i + 1]);
         }  
@@ -237,7 +244,9 @@ pub mod tests {
     #[test]
     fn test_hybrid_sort_10_7() {
         let mut vec: Vec<i32> = Vector::new(10_000_000, 0, 1_00_000);
+        vec.display();
         vec.hybrid_sort(0, vec.len() as isize - 1, 17);
+        vec.display();
         for i in 0..vec.len() - 1 {
             assert!(vec[i] <= vec[i + 1]);
         }  
