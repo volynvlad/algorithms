@@ -1,1 +1,0 @@
-/home/vlad/Documents/progs/Rust/algorithms/quicksort/target/debug/quicksort-e94574777266a0b2: /home/vlad/Documents/progs/Rust/algorithms/quicksort/src/lib.rs /home/vlad/Documents/progs/Rust/algorithms/quicksort/src/main.rs

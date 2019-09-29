@@ -1,1 +1,0 @@
-/home/vlad/Documents/progs/Rust/algorithms/sorts/target/debug/sorts-94ea7f2d54debeba: /home/vlad/Documents/progs/Rust/algorithms/sorts/src/lib.rs /home/vlad/Documents/progs/Rust/algorithms/sorts/src/main.rs
