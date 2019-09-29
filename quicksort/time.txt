@@ -1,0 +1,45 @@
+10^5 elements with range 10^5
+Right  qs 8.936961ms
+Random qs 12.882482ms
+Best hybrid  s 7.818837ms with k = 36
+lib sort 4.710499ms
+10^5 elements with range 10^6
+Right  qs 8.573877ms
+Random qs 12.058805ms
+Best hybrid  s 7.86122ms with k = 36
+lib sort 4.704848ms
+10^5 elements with range 10^7
+Right  qs 8.400485ms
+Random qs 12.23441ms
+Best hybrid  s 7.7005ms with k = 36
+lib sort 7.282754ms
+10^6 elements with range 10^5
+Right  qs 105.58997ms
+Random qs 157.502149ms
+Best hybrid  s 87.885696ms with k = 19
+lib sort 55.738896ms
+10^6 elements with range 10^6
+Right  qs 103.86657ms
+Random qs 147.468009ms
+Best hybrid  s 93.539192ms with k = 34
+lib sort 55.851762ms
+10^6 elements with range 10^7
+Right  qs 100.811789ms
+Random qs 138.877427ms
+Best hybrid  s 93.923737ms with k = 30
+lib sort 55.632457ms
+10^7 elements with range 10^5
+Right  qs 1.371241693s
+Random qs 2.672655262s
+Best hybrid  s 1.11879812s with k = 64
+lib sort 645.533888ms
+10^7 elements with range 10^6
+Right  qs 1.104878222s
+Random qs 1.739061419s
+Best hybrid  s 1.040494874s with k = 16
+lib sort 645.360104ms
+10^7 elements with range 10^7
+Right  qs 1.178249707s
+Random qs 1.638757936s
+Best hybrid  s 1.111660793s with k = 35
+lib sort 640.72229ms

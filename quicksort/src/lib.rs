@@ -127,8 +127,8 @@ impl Vector<i32> for Vec<i32> {
             value = self[i as usize];
             // 1                 => n
             j = i;
-            //    1 1   1    1       2         1   => 7n^2
-            while j > 0 && j >= l && self[j as usize - 1] > value { 
+            //    1      1   2         1   => 7n^2
+            while j > l && self[j as usize - 1] > value { 
                 //       1      1            2  => 4n^2
                 self[j as usize] = self[j as usize - 1];
                 //1   1   => 2n^2

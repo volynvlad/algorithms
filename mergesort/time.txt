@@ -1,99 +1,27 @@
 10^5 elements with range 10^5
-merge sort 968.796023ms
-Hybrid  s 287.710035ms with k = 4
-Hybrid  s 162.168184ms with k = 5
-Hybrid  s 146.987472ms with k = 6
-Hybrid  s 146.038579ms with k = 7
-Hybrid  s 146.298387ms with k = 8
-Hybrid  s 147.890417ms with k = 9
-Hybrid  s 146.740985ms with k = 10
-Hybrid  s 91.927434ms with k = 11
-Hybrid  s 78.235449ms with k = 12
+merge sort 16.470705ms
+Best hybrid_sort = 10.350057ms with k = 59
 10^5 elements with range 10^6
-merge sort 965.360285ms
-Hybrid  s 286.696801ms with k = 4
-Hybrid  s 162.481627ms with k = 5
-Hybrid  s 148.630332ms with k = 6
-Hybrid  s 147.478627ms with k = 7
-Hybrid  s 147.095809ms with k = 8
-Hybrid  s 143.763144ms with k = 9
-Hybrid  s 146.44658ms with k = 10
-Hybrid  s 92.010874ms with k = 11
-Hybrid  s 77.444149ms with k = 12
+merge sort 16.257876ms
+Best hybrid_sort = 10.342754ms with k = 57
 10^5 elements with range 10^7
-merge sort 968.335041ms
-Hybrid  s 286.38269ms with k = 4
-Hybrid  s 162.600415ms with k = 5
-Hybrid  s 147.481624ms with k = 6
-Hybrid  s 147.646161ms with k = 7
-Hybrid  s 148.734826ms with k = 8
-Hybrid  s 147.84545ms with k = 9
-Hybrid  s 147.00001ms with k = 10
-Hybrid  s 92.594284ms with k = 11
-Hybrid  s 78.640229ms with k = 12
+merge sort 16.273356ms
+Best hybrid_sort = 10.345803ms with k = 52
 10^6 elements with range 10^5
-merge sort 147.650915026s
-Hybrid  s 36.681779475s with k = 4
-Hybrid  s 35.434140272s with k = 5
-Hybrid  s 29.930034645s with k = 6
-Hybrid  s 18.332484832s with k = 7
-Hybrid  s 18.20557199s with k = 8
-Hybrid  s 18.128435517s with k = 9
-Hybrid  s 18.265769385s with k = 10
-Hybrid  s 18.529638166s with k = 11
-Hybrid  s 18.074642196s with k = 12
+merge sort 183.935502ms
+Best hybrid_sort = 124.624661ms with k = 63
 10^6 elements with range 10^6
-merge sort 148.025387641s
-Hybrid  s 35.802335519s with k = 4
-Hybrid  s 36.210946066s with k = 5
-Hybrid  s 29.468205756s with k = 6
-Hybrid  s 18.519527642s with k = 7
-Hybrid  s 18.153942027s with k = 8
-Hybrid  s 18.886955949s with k = 9
-Hybrid  s 18.81704901s with k = 10
-Hybrid  s 19.586366702s with k = 11
-Hybrid  s 18.31286257s with k = 12
+merge sort 193.909159ms
+Best hybrid_sort = 127.935991ms with k = 42
 10^6 elements with range 10^7
-merge sort 146.492709559s
-Hybrid  s 36.416393484s with k = 4
-Hybrid  s 36.568363134s with k = 5
-Hybrid  s 29.120572109s with k = 6
-Hybrid  s 18.432920745s with k = 7
-Hybrid  s 18.228936118s with k = 8
-Hybrid  s 18.563388798s with k = 9
-Hybrid  s 17.992091622s with k = 10
-Hybrid  s 18.595251077s with k = 11
-Hybrid  s 18.347190365s with k = 12
+merge sort 185.266197ms
+Best hybrid_sort = 127.957084ms with k = 33
 10^7 elements with range 10^5
-merge sort 80.189630051s
-Hybrid  s 18.220729065s with k = 4
-Hybrid  s 18.256144509s with k = 5
-Hybrid  s 18.232149649s with k = 6
-Hybrid  s 18.276050692s with k = 7
-Hybrid  s 14.428109598s with k = 8
-Hybrid  s 9.933783284s with k = 9
-Hybrid  s 9.941802805s with k = 10
-Hybrid  s 9.927472054s with k = 11
-Hybrid  s 9.949006752s with k = 12
+merge sort 2.005790633s
+Best hybrid_sort = 1.356258081s with k = 51
 10^7 elements with range 10^6
-merge sort 80.664380502s
-Hybrid  s 18.488809036s with k = 4
-Hybrid  s 18.391738278s with k = 5
-Hybrid  s 18.44630038s with k = 6
-Hybrid  s 18.457418831s with k = 7
-Hybrid  s 14.580087021s with k = 8
-Hybrid  s 10.219750144s with k = 9
-Hybrid  s 10.331578695s with k = 10
-Hybrid  s 10.425165919s with k = 11
-Hybrid  s 10.165214822s with k = 12
+merge sort 2.077051457s
+Best hybrid_sort = 1.482699425s with k = 63
 10^7 elements with range 10^7
-merge sort 80.509510379s
-Hybrid  s 18.527945449s with k = 4
-Hybrid  s 18.510578311s with k = 5
-Hybrid  s 18.503820256s with k = 6
-Hybrid  s 18.494954194s with k = 7
-Hybrid  s 14.598711976s with k = 8
-Hybrid  s 10.341926651s with k = 9
-Hybrid  s 10.398605969s with k = 10
-Hybrid  s 10.254260602s with k = 11
-Hybrid  s 10.185632335s with k = 12
+merge sort 2.142859209s
+Best hybrid_sort = 1.521909927s with k = 64

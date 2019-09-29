@@ -92,12 +92,12 @@ impl Vector<i32> for Vec<i32> {
             if left.peek().is_none() {           
                 self[k as usize] = *right.next().unwrap(); 
                 continue;       
-            }
+            }       
 
             if right.peek().is_none() {           
                 self[k as usize] = *left.next().unwrap();           
                 continue;       
-            }
+            } 
 
             if right.peek().unwrap() < left.peek().unwrap() {           
                 self[k as usize] = *right.next().unwrap();       
