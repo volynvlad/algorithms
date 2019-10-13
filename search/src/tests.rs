@@ -1,4 +1,5 @@
 use super::*;
+use super::BinaryTree;
 
 #[test]
 fn test_len() {
@@ -56,4 +57,39 @@ fn test_interpolation_search_none() {
     let result_value = vec.interpolation_search(search_value, 0, vec.len() as i32 - 1);
     assert!(result_value.is_none(), "result is {}", result_value.unwrap());
 }
+
+#[test]
+fn test_is_empty() {
+    let tree = BinaryTree::new();
+    assert!(tree.is_empty());
+}
+
+#[test]
+fn test_is_not_empty() {
+    let mut tree = BinaryTree::new();
+    tree.insert(5);
+    assert!(!tree.is_empty());
+}
+
+#[test]
+fn test_find() {
+    let mut tree = BinaryTree::new();
+    tree.insert(5);
+    tree.insert(4);
+    tree.insert(3);
+    let search_value = 4;
+    println!("{:?}", tree.search(search_value));
+    assert!(tree.search(search_value).unwrap().value == search_value);
+}
+
+#[test]
+fn test_find_none() {
+    let mut tree = BinaryTree::new();
+    tree.insert(5);
+    tree.insert(4);
+    tree.insert(3);
+    let search_value = 2;
+    assert!(tree.search(search_value).is_none());
+}
+
 
