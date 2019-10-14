@@ -92,4 +92,16 @@ fn test_find_none() {
     assert!(tree.search(search_value).is_none());
 }
 
+#[test] 
+fn test_min() { 
+    let mut tree = BinaryTree::new();
+    tree.insert(5);
+    tree.insert(6);
+    tree.insert(7);
+    tree.insert(4);
+    tree.insert(3);
+    let index = 4;
+    assert_eq!(tree.min(4), 6);
+}
+
 

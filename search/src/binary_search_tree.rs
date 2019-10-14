@@ -39,14 +39,18 @@ impl BinaryTree {
                 BinaryTree::display_helper(n);
                 println!("{}", n.value);
             },
-            None => { }
+            None => {
+                println!("None");
+            }
         }
         match node.right {
             Some(ref n) => {
                 BinaryTree::display_helper(n);
                 println!("{}", n.value);
             },
-            None => { }
+            None => { 
+                println!("None");
+            }
         }
     }
 
@@ -126,6 +130,67 @@ impl BinaryTree {
             None => None
         } 
     }
+
+    pub fn min(&mut self, mut index: i32) -> Option<&Node>  {
+        let mut vec = vec![]; //Node 
+        let mut current = &self.root;
+      
+        while vec.len() > 0 || !current.is_none() { 
+            match current {
+                Some(ref n) => {
+                    vec.push(n);
+                    current = &current.unwrap().left;
+                },
+                None => {
+                    current = &vec.pop();
+                    index -= 1;
+                    if index == 0 {
+                        return Some(current);
+                    }
+                    current = &current.unwrap().right;
+                }
+            }
+        }
+
+        /*
+        while vec.len() > 0 || !(&current).is_none() {
+            if !current.is_none() {
+                vec.push(&current);
+                current = &(&current.unwrap()).left;
+            } else {
+                current = &vec.pop().unwrap();
+                index -= 1;
+                if index == 0 { 
+                    return &current;
+                }
+
+                current = &(&current.unwrap()).right;
+            }
+        }
+        */
+        return None;
+    }
+    /*
+    fn left_rotation(&self, value: i32) -> Option<&Node> {
+    
+    }
+
+    fn right_rotation(&self, value: i32) -> Option<&Node> {
+    
+    }
+    
+    pub fn balance(&self) {
+        let mut current = self.root;
+        while !current.is_none() {
+            if !current.is_none() {
+                let node = self.right_rotation(current.unwrap().value);
+                current = node;
+            } else {
+                current = current.unwrap().right;
+            }
+        }
+    }
+    */
 
 }
 
